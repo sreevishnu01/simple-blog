@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% for post in posts %}
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">{{ post.title }}</h1>
+            <p class="lead my-3">{{ post.sample}}</p>
+            <p class="lead mb-0"><a href="{{	post.get_absolute_url	}}" class="text-white fw-bold">Continue
+                    reading...</a></p>
+        </div>
+    </div>
+    {% endfor %}
+    {% include "pagination.html" with page=posts %}
+    {% endblock body %}
