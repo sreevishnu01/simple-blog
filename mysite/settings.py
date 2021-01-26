@@ -122,6 +122,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static", ]
+    BASE_DIR / "static", "/home/sreevishnu01/simple-blog/static/admin", "/home/sreevishnu01/simple-blog/static/ckeditor"]
 
 # STATIC_ROOT = 'static'
