@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 class PublishedManager(models.Manager):
@@ -22,7 +23,7 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name='blog_post'
     )
     sample = models.TextField(max_length=150, default=0.0)
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     Updated = models.DateTimeField(auto_now=True)
