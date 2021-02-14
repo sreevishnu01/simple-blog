@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'blog\index.html' %}
 {% block title %}Share a post{% endblock %}
 
 {% block body %}
@@ -9,11 +9,13 @@
 </p>
 {% else %}
 <h1>Share "{{ post.title }}" by e-mail</h1>
-<form action="." method="post">
+<div class="col-md-6 mb-2">
+<form action="." method="post" class="card-body morder-for">
     {{ form.as_p }}
     {% csrf_token %}
     <input type="submit" value="Send	e-mail">
 </form>
+</div>
 {% endif %}
 
 

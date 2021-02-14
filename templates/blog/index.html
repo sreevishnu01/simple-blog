@@ -3,10 +3,11 @@
 <html lang="en">
 
 <head>
-    <title>amazo</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'vishnu.css' %}" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="stylesheet" href="{% static 'simple.css' %}">
     <style type="text/css">
         html,
         body,
@@ -36,27 +37,30 @@
         }
     </style>
 </head>
-
+</head>
 
 <body>
-    <!-- navbar -->
-    <!-- Collapse -->
+    <nav class="navbar">
+        <li> <a href="/">home</a></li>
+        <li> <a href="">blog</a></li>
+        <li> <a href="">new</a></li>
+    </nav>
+
+    <div id="show" class="box-1 container ">
 
 
-    <ul class="navbar">
+    </div>
 
-        <li><a class="active" href="/">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+    <main>
+        
+        {% block body %}
+    {% endblock body %}
+    </main>
 
-    </ul>
-    
-    <br>
-  
-{% block body %}
-{% endblock body %}
+    <footer id="footer-main">
+        <p>Copyright &copy; 2021 war</p>
 
+    </footer>
 </body>
 
 </html>
