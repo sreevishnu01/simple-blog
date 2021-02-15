@@ -3,3 +3,4 @@ django-allauth == 0.44.0
 django-ckeditor == 6.0.0
 django-js-asset == 1.2.2
 gunicorn
+django-heroku
