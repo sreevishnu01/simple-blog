@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['agile-sierra-58479.herokuapp.com']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': config('NAME'),
         'HOST': config('HOST'),
         'PORT': config('PORT'),
